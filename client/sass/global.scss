@@ -1,0 +1,19 @@
+@import 'config';
+
+html {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+  position: relative;
+  font-family: $font-common;
+  background-color: $color-light;
+  color: $color-dark;
+  font-size: $font-size-normal;
+}

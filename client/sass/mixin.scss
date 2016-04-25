@@ -1,0 +1,32 @@
+@import './config';
+
+@mixin font-icon($icon, $size: $font-size-medium, $color: $color-darker) {
+  font: normal normal normal $size FontAwesome;
+  display: inline-block;
+  content: $icon;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: $color;
+}
+
+@mixin center-absolute() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-vertical() {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin ratio-16-9($position: relative) {
+  position: $position;
+  &:before {
+    content: '';
+    padding-top: 56.25%;
+    display: block;
+  }
+}
