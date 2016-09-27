@@ -1,10 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { example } from '../actions/actions';
+import {Link} from 'react-router';
+import {connect} from 'react-redux';
+import {example} from '../actions/actions';
 import Example from '../components/Example';
+import styles from './index.scss';
 
-
-require('./index.scss');
 const compClassName = 'index';
 
 var IndexContainer = React.createClass({
@@ -19,12 +19,13 @@ var IndexContainer = React.createClass({
 
     render() {
 
-        const { name = '', example } = this.props;
+        const {name = '', example} = this.props;
 
         return (
             <div className={compClassName}>
-                <input type="text" onChange={this.changeName} placeholder="type the name" value={name} />
-                <Example name={name} />
+                <input type="text" onChange={this.changeName} placeholder="type the name" value={name}/>
+                <Example name={name}/>
+                <Link to="/stam">link to stam</Link>
             </div>
         );
     }

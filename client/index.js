@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import RootContainer from './containers/RootContainer';
 import IndexContainer from './containers/IndexContainer';
+import StamContainer from './containers/StamContainer';
 import configureStore from './store/configure-store';
 import styles from './styles.js';
 import config from './config';
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Router history={history}>
             <Route path="/" component={RootContainer}>
                 <IndexRoute component={IndexContainer} />
+                <Route path="/stam" component={StamContainer} />
             </Route>
         </Router>
     </Provider>,

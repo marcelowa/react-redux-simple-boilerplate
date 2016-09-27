@@ -1,6 +1,6 @@
 import React from 'react';
+import styles from './root.scss';
 
-require('./root.scss');
 var RootContainer = React.createClass({
 
     render() {
